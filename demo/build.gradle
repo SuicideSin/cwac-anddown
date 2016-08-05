@@ -7,19 +7,18 @@ repositories {
 }
 
 dependencies {
-    debugCompile project(':anddown')
-    releaseCompile 'com.commonsware.cwac:anddown:0.2.+'
+    project(':anddown')
 }
 
 android {
-    compileSdkVersion 7
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 23 
+    buildToolsVersion "23.0.3"
 
     splits {
         abi {
             enable true
             reset()
-            include 'armeabi', 'armeabi-v7a', 'x86', 'x86_64', 'am64-v8a'
+            include 'armeabi', 'armeabi-v7a', 'x86'
             universalApk true
         }
     }
